@@ -1,6 +1,6 @@
 {
   "name": "@vaadin-component-factory/vcf-avatar-group",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Vaadin Component Factory Avatar Group",
   "main": "theme/lumo/vcf-avatar-group.js",
   "author": "Vaadin Ltd",
@@ -37,10 +37,10 @@
   },
   "dependencies": {
     "@polymer/polymer": "^3.0.0",
+    "@vaadin-component-factory/vcf-avatar-item": "^0.1.1",
     "@vaadin/vaadin-element-mixin": "^2.1.3",
     "@vaadin/vaadin-lumo-styles": "^1.5.0",
-    "@vaadin/vaadin-themable-mixin": "^1.4.4",
-    "vcf-avatar-item": "github:vaadin-component-factory/vcf-avatar-item#master"
+    "@vaadin/vaadin-themable-mixin": "^1.4.4"
   },
   "devDependencies": {
     "@polymer/iron-demo-helpers": "^3.0.0-pre.19",

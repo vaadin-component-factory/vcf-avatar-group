@@ -1,7 +1,7 @@
 import { html, PolymerElement } from '@polymer/polymer/polymer-element';
 import { ThemableMixin } from '@vaadin/vaadin-themable-mixin';
 import { ElementMixin } from '@vaadin/vaadin-element-mixin';
-import 'vcf-avatar-item';
+import '@vaadin-component-factory/vcf-avatar-item';
 
 class VcfAvatarGroup extends ElementMixin(ThemableMixin(PolymerElement)) {
   static get template() {
@@ -35,7 +35,7 @@ class VcfAvatarGroup extends ElementMixin(ThemableMixin(PolymerElement)) {
   }
 
   static get version() {
-    return '0.1.0';
+    return '0.1.2';
   }
 
   static get properties() {
