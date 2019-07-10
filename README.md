@@ -5,13 +5,13 @@
 Install `vcf-avatar-group`:
 
 ```sh
-npm i @vaadin/vcf-avatar-group --save
+npm i @vaadin-component-factory/vcf-avatar-group --save
 ```
 
 Once installed, import it in your application:
 
 ```js
-import '@vaadin/vcf-avatar-group/vcf-avatar-group.js';
+import '@vaadin-component-factory/vcf-avatar-group/vcf-avatar-group.js';
 ```
 
 ## Running demo
