@@ -17,8 +17,22 @@
   <body>
     <div class="vertical-section-container">
       <demo-snippet>
+        <style>
+          vcf-avatar-group {
+            margin-bottom: 1em;
+          }
+        </style>
         <template>
           <vcf-avatar-group></vcf-avatar-group>
+          <vcf-avatar-group max="3"></vcf-avatar-group>
+          <script>
+            window.addEventListener('WebComponentsReady', () => {
+              const items = [{ name: 'Dave' }, { name: 'Jane' }, { name: 'Tom' }, { name: 'Hannah' }];
+              // assign items array to all avatar groups
+              const avatarGroups = document.querySelectorAll('vcf-avatar-group');
+              [...avatarGroups].forEach(avatarGroup => (avatarGroup.items = items));
+            });
+          </script>
         </template>
       </demo-snippet>
     </div>
