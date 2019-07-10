@@ -1,19 +1,19 @@
 {
-  "name": "vcf-element",
+  "name": "vcf-avatar-group",
   "version": "0.1.0",
-  "description": "Vaadin Component Factory Element",
-  "main": "theme/lumo/vcf-element.js",
+  "description": "Vaadin Component Factory Avatar Group",
+  "main": "theme/lumo/vcf-avatar-group.js",
   "author": "Vaadin Ltd",
   "license": "https://raw.githubusercontent.com/vaadin/vaadin-incubator-element/master/LICENSE",
   "repository": {
     "type": "git",
-    "url": "vaadin-component-factory/vcf-element"
+    "url": "vaadin-component-factory/vcf-avatar-group"
   },
   "keywords": [
     "Vaadin",
     "vaadin-incubator-element",
     "vaadin-component-factory",
-    "vcf-element",
+    "vcf-avatar-group",
     "web-components",
     "web-component",
     "polymer"
