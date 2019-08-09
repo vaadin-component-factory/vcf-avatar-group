@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { html, PolymerElement } from '@polymer/polymer/polymer-element';
 import { ThemableMixin } from '@vaadin/vaadin-themable-mixin';
 import { ElementMixin } from '@vaadin/vaadin-element-mixin';
@@ -20,8 +21,8 @@ class VcfAvatarGroup extends ElementMixin(ThemableMixin(PolymerElement)) {
         vcf-avatar-item:not(:last-child),
         :host ::slotted(vcf-avatar-item:not(:last-child)) {
           margin-right: calc(var(--lumo-size-s) / -4);
-          -webkit-mask-image: url(/assets/avatar-mask.svg);
-          mask-image: url(/assets/avatar-mask.svg);
+          -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHdpZHRoPSIzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMzQtLjk3NTc2NTc1Yy02Ljk5MTE1NDIgMi40NzEwMTg0NC0xMiA5LjEzODQ1Mjc5LTEyIDE2Ljk3NTc2NTc1IDAgNy44MzczMTMgNS4wMDg4NDU4IDE0LjUwNDc0NzMgMTIgMTYuOTc1NzY1OHYxLjAyNDIzNDJoLTM2di0zNmgzNnoiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==);
+          mask-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHdpZHRoPSIzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMzQtLjk3NTc2NTc1Yy02Ljk5MTE1NDIgMi40NzEwMTg0NC0xMiA5LjEzODQ1Mjc5LTEyIDE2Ljk3NTc2NTc1IDAgNy44MzczMTMgNS4wMDg4NDU4IDE0LjUwNDc0NzMgMTIgMTYuOTc1NzY1OHYxLjAyNDIzNDJoLTM2di0zNmgzNnoiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==);
           -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
         }
@@ -35,7 +36,7 @@ class VcfAvatarGroup extends ElementMixin(ThemableMixin(PolymerElement)) {
   }
 
   static get version() {
-    return '0.1.2';
+    return '0.1.3';
   }
 
   static get properties() {
