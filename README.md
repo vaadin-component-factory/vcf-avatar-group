@@ -8,11 +8,27 @@ Install `vcf-avatar-group`:
 npm i @vaadin-component-factory/vcf-avatar-group --save
 ```
 
+## Usage
+
 Once installed, import it in your application:
 
 ```js
 import '@vaadin-component-factory/vcf-avatar-group/vcf-avatar-group.js';
 ```
+
+And use it:
+
+```html
+<vcf-avatar-group></vcf-avatar-group>
+```
+
+```javascript
+const people = [{ name: 'Dave' }, { name: 'Jane' }, { name: 'Tom' }, { name: 'Hannah' }];
+const avatarGroup = document.querySelector('vcf-avatar-group');
+avatarGroup.items = people;
+```
+
+You can set a `max` attribute to limit how many avatar items are shown. By default, the limit is 4.
 
 ## Running demo
 
