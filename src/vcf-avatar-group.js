@@ -36,7 +36,7 @@ class VcfAvatarGroup extends ElementMixin(ThemableMixin(PolymerElement)) {
   }
 
   static get version() {
-    return '0.1.4';
+    return '0.2.0';
   }
 
   static get properties() {
@@ -59,7 +59,9 @@ class VcfAvatarGroup extends ElementMixin(ThemableMixin(PolymerElement)) {
 
     for (let i = 0; i < shown; i++) {
       const avatar = document.createElement('vcf-avatar-item');
-      avatar.name = this.items[i].name;
+      this.items[i].name && avatar.setAttribute('name', this.items[i].name);
+      this.items[i].abbr && avatar.setAttribute('abbr', this.items[i].abbr);
+      this.items[i].image && avatar.setAttribute('image', this.items[i].image);
       this.appendChild(avatar);
     }
 

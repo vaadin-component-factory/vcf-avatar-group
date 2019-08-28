@@ -27,7 +27,12 @@
           <vcf-avatar-group max="3"></vcf-avatar-group>
           <script>
             window.addEventListener('WebComponentsReady', () => {
-              const items = [{ name: 'Dave' }, { name: 'Jane' }, { name: 'Tom' }, { name: 'Hannah' }];
+              const items = [
+                { name: 'Dave' },
+                { abbr: 'JD' },
+                { name: 'Hannah' },
+                { image: 'https://randomuser.me/api/portraits/women/5.jpg', name: 'Jane' }
+              ];
               // assign items array to all avatar groups
               const avatarGroups = document.querySelectorAll('vcf-avatar-group');
               [...avatarGroups].forEach(avatarGroup => (avatarGroup.items = items));

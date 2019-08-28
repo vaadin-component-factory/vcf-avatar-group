@@ -23,10 +23,17 @@ And use it:
 ```
 
 ```javascript
-const people = [{ name: 'Dave' }, { name: 'Jane' }, { name: 'Tom' }, { name: 'Hannah' }];
+const people = [
+  { name: 'Dave' },
+  { abbr: 'JD' },
+  { name: 'Hannah' },
+  { image: 'https://randomuser.me/api/portraits/women/5.jpg', name: 'Jane' }
+];
 const avatarGroup = document.querySelector('vcf-avatar-group');
 avatarGroup.items = people;
 ```
+
+For each item, you can provide a `name`, `abbr`, or `image`. Please refer to [vcf-avatar-item](https://github.com/vaadin-component-factory/vcf-avatar-item#usage) for more info.
 
 You can set a `max` attribute to limit how many avatar items are shown. By default, the limit is 4.
 
@@ -42,7 +49,7 @@ You can set a `max` attribute to limit how many avatar items are shown. By defau
 
 ## Contributing
 
-  To contribute to the component, please read [the guideline](https://github.com/vaadin/vaadin-core/blob/master/CONTRIBUTING.md) first.
+To contribute to the component, please read [the guideline](https://github.com/vaadin/vaadin-core/blob/master/CONTRIBUTING.md) first.
 
 ## License
 
