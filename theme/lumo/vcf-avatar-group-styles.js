@@ -5,7 +5,7 @@ theme.id = 'vcf-avatar-group-lumo';
 theme.setAttribute('theme-for', 'vcf-avatar-group');
 theme.innerHTML = `
     <template>
-      <style include="lumo-sizing">
+      <style>
         :host {}
       </style>
     </template>
