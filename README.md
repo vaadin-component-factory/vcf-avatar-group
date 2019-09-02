@@ -1,5 +1,9 @@
 # &lt;vcf-avatar-group&gt;
 
+## Demo
+
+ https://vcf-avatar-group.netlify.com/
+
 ## Installation
 
 Install `vcf-avatar-group`:
