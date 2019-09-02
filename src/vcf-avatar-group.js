@@ -36,7 +36,7 @@ class VcfAvatarGroup extends ElementMixin(ThemableMixin(PolymerElement)) {
   }
 
   static get version() {
-    return '0.2.2';
+    return '0.2.3';
   }
 
   static get properties() {
