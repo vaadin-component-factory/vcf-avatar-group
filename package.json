@@ -1,6 +1,6 @@
 {
   "name": "@vaadin-component-factory/vcf-avatar-group",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Vaadin Component Factory Avatar Group",
   "main": "theme/lumo/vcf-avatar-group.js",
   "author": "Vaadin Ltd",
