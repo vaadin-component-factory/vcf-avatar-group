@@ -6,6 +6,8 @@ const { BabelMultiTargetPlugin } = require('webpack-babel-multi-target-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin');
+const HtmlReplaceWebpackPlugin = require('html-replace-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
@@ -108,6 +110,13 @@ const productionConfig = merge([
       new HtmlWebpackPlugin({
         template: INDEX_TEMPLATE
       }),
+      new HtmlReplaceWebpackPlugin([
+        {
+          pattern: /<script.*?src=".*?\.js".*?<\/script>/g,
+          replacement: ''
+        }
+      ]),
+      new HtmlWebpackTagsPlugin({ tags: ['vendor/webcomponents-bundle.js'], append: false }),
       new CompressionPlugin({ test: /\.js(\.map)?$/i }),
       new BrotliPlugin({
         asset: '[path].br[query]',
