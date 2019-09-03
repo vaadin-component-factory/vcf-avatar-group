@@ -7,11 +7,26 @@
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
     <script type="module" src="demo.js"></script>
     <custom-style>
-      <style is="custom-style" include="demo-pages-shared-styles"></style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+        .centered {
+          max-width: 1000px;
+        }
+        main {
+          opacity: 1;
+          transition: opacity 1s;
+        }
+        main.hidden {
+          opacity: 0;
+        }
+      </style>
     </custom-style>
+    <script>
+      window.addEventListener('WebComponentsReady', () => document.querySelector('main').classList.remove('hidden'));
+    </script>
   </head>
   <body>
-    <div class="vertical-section-container">
+    <main class="vertical-section-container centered hidden">
+      <h3>Basic usage</h3>
       <demo-snippet>
         <style>
           vcf-avatar-group {
@@ -19,8 +34,7 @@
           }
         </style>
         <template>
-          <vcf-avatar-group></vcf-avatar-group>
-          <vcf-avatar-group max="3"></vcf-avatar-group>
+          <vcf-avatar-group id="basic"></vcf-avatar-group>
           <script>
             window.addEventListener('WebComponentsReady', () => {
               const items = [
@@ -30,12 +44,37 @@
                 { image: 'https://randomuser.me/api/portraits/women/5.jpg', name: 'Jane' }
               ];
               // assign items array to all avatar groups
-              const avatarGroups = document.querySelectorAll('vcf-avatar-group');
-              [...avatarGroups].forEach(avatarGroup => (avatarGroup.items = items));
+              const basic = document.getElementById('basic');
+              basic.items = items;
             });
           </script>
         </template>
       </demo-snippet>
-    </div>
+      <h3>Providing max</h3>
+      <demo-snippet>
+        <style>
+          vcf-avatar-group {
+            margin-bottom: 1em;
+          }
+        </style>
+        <template>
+          <!-- You can set a `max` attribute to limit how many avatar items are shown. By default, the limit is 4. -->
+          <vcf-avatar-group id="max" max="3"></vcf-avatar-group>
+          <script>
+            window.addEventListener('WebComponentsReady', () => {
+              const items = [
+                { name: 'Dave' },
+                { abbr: 'JD' },
+                { name: 'Hannah' },
+                { image: 'https://randomuser.me/api/portraits/women/5.jpg', name: 'Jane' }
+              ];
+              // assign items array to all avatar groups
+              const basic = document.getElementById('max');
+              basic.items = items;
+            });
+          </script>
+        </template>
+      </demo-snippet>
+    </main>
   </body>
 </html>
