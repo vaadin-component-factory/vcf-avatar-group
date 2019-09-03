@@ -22,7 +22,8 @@
     "test": "wct",
     "lint": "eslint src/*.js",
     "start": "polymer serve -o",
-    "build:demo": "webpack"
+    "build:demo": "webpack",
+    "publish": "node publish.js"
   },
   "husky": {
     "hooks": {
