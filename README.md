@@ -17,7 +17,7 @@ npm i @vaadin-component-factory/vcf-avatar-group --save
 Once installed, import it in your application:
 
 ```js
-import '@vaadin-component-factory/vcf-avatar-group/vcf-avatar-group.js';
+import '@vaadin-component-factory/vcf-avatar-group';
 ```
 
 And use it:
